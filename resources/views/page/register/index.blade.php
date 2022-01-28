@@ -1,6 +1,6 @@
 @extends('layout.frame')
 
-@section('title', 'Register')
+@section('title', 'laratify/register')
 
 @include('block.head')
 
