@@ -65,7 +65,7 @@
       <form action="{{ route('register') }}" method="get">
         <p class="not_account_p">アカウントをお持ちでない場合は</p>
         <button type="submit" id="sign-up-link" class="register_button">
-          <p>Spotifyに登録する</p>
+          <p>Laratifyに登録する</p>
         </button>
       <form>
     </div>
