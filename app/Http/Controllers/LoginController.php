@@ -12,23 +12,24 @@ class LoginController extends Controller
     }
 
     public function login(Request $request) {
+        $remember_checkbox = $request->input('remember_checkbox');
+        $is_remember = false;
+        if (isset($remember_checkbox) && 'on' === $remember_checkbox) {
+            $is_remember = true;
+        }
+
         $data = $request->validate([
             'email' => ['required', 'email:filter'],
             'password' => ['required', 'string'],
-            // 'remember_token' => ['string'],
+            'remember_token' => ['string'],
         ]);
 
-        if (Auth::attempt($data)) {
-            $request->session()->regenerate();
+        if (Auth::attempt($data, $is_remember)) {
+            if ( ! $is_remember) {
+                $request->session()->regenerate();
+            }
 
-            // if (isset($data['remember_token']) && 'on' === $data['remember_token']) {
-            //     Auth::attempt($data, true);
-            // }
-            // else {
-            //     Auth::attempt($data, false);
-            // }
-
-            return redirect('mypage');
+            return redirect('register');
         }
 
         return back()->withErrors([
