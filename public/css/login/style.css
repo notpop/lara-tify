@@ -1,16 +1,21 @@
+.div_title {
+  width: 100%;
+}
+
+.div_title > .title {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0px 0px 1em;
+  font-size: 30px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgb(217, 218, 220);
+}
+
 .display {
   max-width: 450px;
   margin: 0px auto;
   padding-bottom: 130px;
   display: block;
-}
-
-.display > form > .title {
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
-  padding: 0px 0px 1em;
-  font-size: 30px;
-  margin-bottom: 5px;
 }
 
 .container {

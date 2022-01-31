@@ -3,6 +3,9 @@
     <head>
         @yield('head')
         @yield('css')
+
+        {{-- エラーメッセージ用 --}}
+        <link rel="stylesheet" href="/css/block/nav/error/style.css" media="screen">
     </head>
     <body>
         <div>

@@ -29,11 +29,11 @@ class LoginController extends Controller
                 $request->session()->regenerate();
             }
 
-            return redirect('register');
+            return redirect('mypage');
         }
 
         return back()->withErrors([
-            'email' => '認証情報が間違っています。',
+            'email' => 'メールアドレスまたはパスワードが正しくありません。',
         ])->withInput();
     }
 

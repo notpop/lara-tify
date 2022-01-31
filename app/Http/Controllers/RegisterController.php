@@ -29,7 +29,6 @@ class RegisterController extends Controller
 
         Auth::login($user);
 
-        // fixme mypage login
-        return redirect('login');
+        return redirect('mypage');
     }
 }

@@ -9,14 +9,16 @@
 @endsection
 
 @section('main')
+  <div class="div_title">
+    <h2 class="title">Laratify</h2>
+  </div>
+
   @include('block.header')
   @include('block.nav.error')
 
   <div class="display">
     <form id="form" method="post">
       @csrf
-
-      <h2 class="title">Laratify</h2>
 
       <div class="container">
         <div class="div_subject">

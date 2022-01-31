@@ -1,9 +1,9 @@
-<nav style="display: block;">
+<nav>
   @if ($errors->any())
-    <ul style="color: red;white-space: pre-wrap;">
+    <div class="error">
       @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
+        <p>{{ $error }}</p>
       @endforeach
-    </ul>
+    </div>
   @endif
 </nav>

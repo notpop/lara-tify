@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="/css/register/style.css" media="screen">
 @endsection
 
-
 @section('main')
+  <div class="div_title">
+    <h2 class="title">Laratify</h2>
+  </div>
+
   @include('block.header')
   @include('block.nav.error')
 
@@ -17,7 +20,6 @@
     <form id="form" method="post">
       @csrf
 
-      <h2 class="title">Laratify</h2>
       <div class="div_subject">
         <div class="subject">
           <label for="email" class="">あなたのメールアドレス</label>
